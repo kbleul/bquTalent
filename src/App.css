@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+.sign {
+  font-family: "Italianno", cursive;
+}
+
+.Hero_main {
+  background: linear-gradient(to right, #040316, #2c2c2c 90%, #312d2d);
+}
+
+.circle-container {
+  position: absolute;
+  top: 17%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(rgba(90, 57, 16, 0.8), rgba(0, 0, 0, 0.2));
+  animation: rotateCircle 14s infinite linear;
+  filter: blur(10px); /* Adjust the blur radius as needed */
+}
+
+.circle-container-two {
+  position: absolute;
+  top: 17%;
+  right: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-two {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 80%;
+  background: radial-gradient(rgba(248, 144, 113, 0.2), rgba(0, 0, 0, 0.2));
+  animation: rotateCircleTwo 18s infinite linear;
+  filter: blur(10px); /* Adjust the blur radius as needed */
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg) translateX(100%) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(100%) rotate(-180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100%) rotate(-360deg);
+  }
+}
+
+@keyframes rotateCircleTwo {
+  0% {
+    transform: rotate(0deg) translateX(100%) rotate(360deg);
+  }
+  50% {
+    transform: rotate(-180deg) translateX(100%) rotate(180deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(100%) rotate(0deg);
+  }
+}
+.info {
+  background: linear-gradient(100.18deg, #133f6b 32.8%, #98b2cc 157.56%);
+}
+
+.contact_input {
+  background: rgba(0, 51, 102, 0.05);
+  border: 0.5px solid rgba(0, 51, 102, 0.2);
+}
+
+.contact_textarea {
+  background: #f6f6f6;
+  border: 0.5px solid rgba(0, 51, 102, 0.2);
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  animation: scrollCarousel 6s infinite linear;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+}
+
+.carousel-item {
+  width: 6rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.secondaryHero_box {
+  background: linear-gradient(
+    to right,
+    rgba(189, 188, 188, 0.6) 32.8%,
+    rgba(24, 24, 24, 0.5) 157.56%
+  );
+}
+
+.missionContainer {
+  background: rgba(0, 51, 102, 0.05);
+}
+
+/* Apply initial styles to the elements */
+.bg-gray-100 {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_container {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  transition: padding 0.3s ease-in-out;
+}
+
+.svg-animation {
+  position: absolute;
+  top: 3rem;
+  left: 40%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.details {
+  display: none;
+  transition: display 0.3s ease-in-out;
+}
+
+.title-animation {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+  margin-top: 4rem;
+}
+
+.para-animation {
+  transform: translateY(0);
+  padding-bottom: 3rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Define keyframe animation for the SVG fade out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* Apply the animation on hover */
+.bg-gray-100:hover .svg-animation {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Apply the animation on hover */
+.bg-gray-100:hover .title-animation {
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.bg-gray-100:hover .para-animation {
+  transform: translateY(-50%);
+  padding-bottom: 0;
+}
+
+/* Fade in the details on hover */
+.bg-gray-100:hover .details {
+  display: block;
+}
+
+.bg-gray-100:hover .main_container {
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .circle-container {
+    position: absolute;
+    top: 17%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .circle-container-two {
+    position: absolute;
+    top: 17%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .circle {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: radial-gradient(rgba(90, 57, 16, 0.8), rgba(0, 0, 0, 0.2));
+    animation: rotateCircle 12s infinite linear;
+    filter: blur(10px); /* Adjust the blur radius as needed */
+  }
+  .circle-two {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 80%;
+    background: radial-gradient(rgba(248, 144, 113, 0.2), rgba(0, 0, 0, 0.2));
+    animation: rotateCircleTwo 15s infinite linear;
+    filter: blur(10px); /* Adjust the blur radius as needed */
+  }
+}
